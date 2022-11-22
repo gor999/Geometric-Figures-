@@ -1,25 +1,56 @@
+
+#include"geometric_figures.hpp"
 #include<iostream>
 
-class Geometric_figures
+
+
+void Geometric_figures::show(){
+    std::cout<<this->Perimeter<<"  "<<this->Area<<std::endl;
+    };
+
+double Geometric_figures::calculate_perimetr(){
+       this->Perimeter = (2*(this->width + this->height));      
+       return this->Perimeter;
+    };
+double Geometric_figures::calculate_area(){
+       this->Area = this->width * this->height;      
+       return this->Area;
+    }; 
+
+
+double Geometric_figures::calculate_perimetr_triangle(){
+       Perimeter = this->edge + this->width + this->height;      
+       return Perimeter;
+    };
+
+double Geometric_figures::calculate_area_triangle(){
+        Area =  0.5 * ((Perimeter / 2*(Perimeter / 2 - width))*(Perimeter / 2 - height)) * (Perimeter / 2 - edge);
+       return Area;
+    };
+
+
+double Geometric_figures::calculate_area_elips(){
+       Area =  PI * width * height;
+       return Area;
+    };
+
+
+double Geometric_figures::calculate_perimetr_elips(){
+        Perimeter = PI * (width + height);
+       return Perimeter;
+    };
+
+
+double Geometric_figures::calculate_circle_area()
 {
-private:
-    double Perimeter;
-    double Area;
-public:
-    double calculate_perimetr(double, double){};
-    double calculate_surface(){};
-};
-
-class Rectangle:public Geometric_figures{
-    private:
-    double width;
-    double height;
-
-    public:
-    void foo(){
-    Geometric_figures::calculate_perimetr(double width,double height){
-        return 2*(this->height + this->width); 
-    }
-    
-    }
+    Perimeter = 2 * PI * width;
+    return Perimeter;
 }
+
+double Geometric_figures::calculate_circle_perimetr()
+{
+    Area = PI * width * width;
+    return Area;
+}
+
+
