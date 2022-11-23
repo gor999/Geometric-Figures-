@@ -8,6 +8,11 @@ protected:
    
     
 public:
+   // Փոփոխականների անունները սկսել "m_"֊ով
+   // Encapsulation֊ի հիմնադրույթը ընդհանրապես պահպանված չի 
+   
+   // Perimeter, Area փոփոխակններ պետք չեն, բավարար է դրանք դինամիկ հաշվել և վերադարձնել
+   // ընդամենը ունենալ double calcPerim() { return ... }
     double Perimeter = 0;
     double edge = 0;
     double Area = 0;
@@ -15,6 +20,9 @@ public:
     double height = 0;
     double PI = 3.14;
     void show();
+
+   // Պետք էր ունենալ calculate_perimetr ֆունկցիա, որը կգերբեռնվեր ամեն դասում,
+   // Ոչ թե ծնողում ունենալ calculate_perimetr_triangle calculate_perimetr_elips և այլն
     double calculate_perimetr();
     double calculate_perimetr_triangle();
     double calculate_area_triangle();
